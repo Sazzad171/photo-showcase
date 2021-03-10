@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Darker Grotesque', sans-serif;
+  color: #000;
+  font-size: 22px;
+  font-weight: 400;
+}
+h1, h2, h3 {
+  font-weight: 600;
+}
+a {
+  color: #000;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 500;
+}
+a:hover {
+  color: unset;
+}
+.form-control:focus {
+  outline: none;
+  box-shadow: none;
+}
+/* header */
+.header {
+  padding: 1rem 0px 0;
+  box-shadow: 0 8px 20px 0 rgba(0,0,0,.1);
+}
+.header .nav-items li {
+  display: inline-block;
+}
+.header .nav-items li a {
+  padding: 1rem;
+}
+.header .search-form button {
+  padding: 8px 26px;
+}
+/* photo show area */
+.photo-show-area {
+  margin: 60px 0;
+}
+.photo-show-area .thumb-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+/* footer */
+.footer {
+  background: #F6F5F5;
+  padding: 3rem 0 1rem;
+}
+.footer .social-icon {
+  margin-bottom: 3rem;
+}
+.footer .social-icon li {
+  display: inline-block;
+}
+.footer .social-icon li a {
+  padding: 1rem;
+}
+
+/* custom responsiveness */
+@media (max-width: 767px) {
+  .header {
+    text-align: center;
+  }
+}
