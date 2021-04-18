@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import { Link } from 'react-router-dom'
+
 class Header extends Component {
 
   state = {
@@ -27,35 +29,24 @@ class Header extends Component {
       <header className="header">
         <div className="container">
           <div className="row">
-            <div className="col-md-4 mb-3">
-              <a href="/" className="logo">
-                <h3>Photo Showcase</h3>
-              </a>
+            <div className="col-md-6 mb-3">
+              <Link to="/" className="logo">
+                <h2 className="d-inline">SB Photography</h2>
+              </Link>
             </div>
             
-            <div className="col-md-4 mb-3">
-              <div className="nav-items">
+            <div className="col-md-6 mb-3">
+              <div className="nav-items text-md-end text-center">
                 <ul className="list-unstyled">
                   {
                     this.state.navItems.map(( navitem ) => (
                       <li key={ navitem.id }>
-                        <a href={ navitem.link }> { navitem.name } </a>
+                        <Link to={ navitem.link }> { navitem.name } </Link>
                       </li>  
                     ))
                   }
                 </ul>
               </div>
-            </div>
-
-            <div className="col-md-4 mb-3">
-              <form action="" className="search-form">
-                <div className="input-group">
-                  <input type="text" className="form-control" placeholder="Search here" aria-describedby="basic-addon2"/>
-                  <div className="input-group-append">
-                    <button className="input-group-text btn-danger" id="basic-addon2">Search</button>
-                  </div>
-                </div>
-              </form>
             </div>
           </div>
         </div>
