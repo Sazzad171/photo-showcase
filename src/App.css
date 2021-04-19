@@ -91,4 +91,9 @@ a:hover {
   .header {
     text-align: center;
   }
+  .photo-details-area .description-area {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+  }
 }

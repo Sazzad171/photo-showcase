@@ -89,7 +89,6 @@ export default class Photos extends Component {
   }
 
   render() {
-    console.log(this.state.photos);
     const { loading, photos, total_page, total_search_result, page } = this.state;
     return (
       <>
