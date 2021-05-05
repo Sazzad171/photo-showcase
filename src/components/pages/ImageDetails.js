@@ -34,19 +34,29 @@ export default class ImageDetails extends Component {
       })
     );
 
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
+
+    
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+
+    if(this.props.match !== prevProps.match) {
+
+      let search = window.location.search;
+      let params = new URLSearchParams(search);
+      let id = params.get('id');
+
+      this.gotoSimilar(id);
+    }
   }
 
   // fetch similar photos
-  gotoSimilar = (e) => {
+  gotoSimilar = (id) => {
     this.setState({
       full_img: ['1'],
       loading: true
     })
-
-    let search = window.location.search;
-    let params = new URLSearchParams(search);
-    let id = params.get('id');
 
     axios.get('https://api.unsplash.com/photos/' + id + '?client_id=dQD7FU3WqcRI9XyP6BzPuH8XpZEdvM8Y5kIBE_-wRDE').then(
       res => this.setState({
