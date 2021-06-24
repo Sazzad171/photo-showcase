@@ -92,8 +92,6 @@ export default class Photos extends Component {
     }
 
     window.scrollTo(0, 0);
-
-    console.log(prevPage);
   }
 
   // search string set

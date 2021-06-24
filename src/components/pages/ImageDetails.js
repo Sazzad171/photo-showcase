@@ -113,7 +113,7 @@ export default class ImageDetails extends Component {
                 {
                   related_collection && related_collection.results.map( (photo, i) => (
                     <div key={i} className="col-lg-4 col-md-4 mb-3">
-                      <Link to={ '/photo?id=' + photo.cover_photo.id } onClick={ this.gotoSimilar } >
+                      <Link to={ '/photo?id=' + photo.cover_photo.id } >
                         { loading ? <Skeleton width="100%" height={300} /> : <img src={photo.cover_photo && photo.cover_photo.urls.small} alt="img" className="thumb-img mb-3"/> }
                         
                         <h4 className="img-name">{photo.cover_photo && photo.cover_photo.alt_description}</h4>
