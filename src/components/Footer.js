@@ -39,7 +39,7 @@ export default class Footer extends Component {
             
           </ul>
           <hr/>
-          <small className="copyright">&copy; 2021 Photograpy. Allright reserved</small>
+          <small className="copyright">&copy; 2021 Photograpy. All right reserved</small>
         </div>
       </footer>
     )
